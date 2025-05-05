@@ -20,15 +20,19 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+           "assets": [
+  "src/favicon.ico",
+  "src/assets"
+],
+
+       
+              "styles": [
+  "src/styles.css",
+  "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+
+
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            
             "scripts": []
           },
           "configurations": {
@@ -92,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4c01e565-4f02-4ca6-af8b-0737df56fa89"
   }
 }

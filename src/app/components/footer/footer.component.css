@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height */
+}
+
+.main-content {
+  flex: 1; /* Pushes the footer down */
+}
+
+footer {
+  background-color: #b0aca8; /* Match your theme */
+  color: rgb(16, 15, 15);
+  text-align: center;
+  padding: 10px 0;
+}
