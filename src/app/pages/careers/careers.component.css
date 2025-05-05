@@ -33,6 +33,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   overflow: hidden;
+  margin: 0 auto; /* Ensures the card is centered */
 }
 
 /* Image Styling for Jobs */
@@ -68,4 +69,49 @@
 /* Add subtle hover animations to buttons */
 .apply-btn:active {
   transform: scale(0.98);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .career-container {
+    padding: 40px 10px;
+  }
+
+  /* Make the job cards take more space on tablets */
+  .job-card {
+    width: 45%; /* Take 45% width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Reduce padding for smaller screens */
+  .career-container {
+    padding: 30px 10px;
+  }
+
+  /* Adjust job card width for mobile */
+  .job-card {
+    width: 90%; /* Take 90% width for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .job-list {
+    gap: 20px; /* Reduce gap between cards */
+  }
+
+  /* Title font size */
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    width: 100%; /* Full-width job card on very small screens */
+  }
+
+  /* Adjust the font size of title for very small screens */
+  .title {
+    font-size: 24px;
+  }
 }

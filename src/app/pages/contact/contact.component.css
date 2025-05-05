@@ -1,3 +1,4 @@
+/* Contact Page Container */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -77,6 +78,7 @@ blockquote {
   color: #555;
   line-height: 1.6;
 }
+
 .view-us-heading {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -84,6 +86,7 @@ blockquote {
   font-weight: bold;
   margin-left: 600px;
 }
+
 .company-logos-container {
   display: flex;
   justify-content: center;
@@ -109,23 +112,92 @@ blockquote {
 .company-logo:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 .company-logo:nth-child(2) {
   animation-delay: 0.4s;
 }
+
 .company-logo:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 .company-logo:nth-child(4) {
   animation-delay: 0.8s;
 }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
+/* Responsive Styles */
+
+/* For tablets (screens smaller than 1024px) */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 30px 15px;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  /* Contact details and contact box take full width on smaller screens */
+  .contact-details,
+  .contact-box {
+    flex: 1 1 100%;
+    margin-bottom: 20px; /* Add margin between the sections */
+  }
+
+  .contact-image {
+    max-width: 400px;
+  }
+
+  .view-us-heading {
+    font-size: 1.6rem;
+    margin-left: 0; /* Align the heading to the center */
+  }
+}
+
+/* For mobile (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Reduce padding for mobile */
+  .contact-details,
+  .contact-box {
+    padding: 20px;
+  }
+
+  /* Make the company logos responsive */
+  .company-logos-container {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .company-logo {
+    width: 100%;
+    max-width: 300px; /* Make company logos smaller on mobile */
+  }
+
+  .view-us-heading {
+    font-size: 1.4rem;
+    margin-left: 0;
+    text-align: center; /* Center the view-us-heading */
+  }
+
+  /* Title font size for the left section */
+  .contact-details h2 {
+    font-size: 22px;
+  }
+}
+
+/* For very small mobile (screens smaller than 480px) */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-image {
+    max-width: 300px;
+  }
+
+  /* Further reduce title font size */
+  .contact-details h2 {
+    font-size: 18px;
   }
 }

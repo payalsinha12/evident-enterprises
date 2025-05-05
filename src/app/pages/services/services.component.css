@@ -1,3 +1,4 @@
+/* Services Container */
 .services-container {
   padding: 50px 20px;
   background: linear-gradient(120deg, #f0f0f0, #ffffff);
@@ -5,15 +6,17 @@
   animation: fadeIn 1s ease-in-out;
 }
 
+/* Title */
 .title {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 40px;
   color: #333;
   margin-top: 100px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -21,11 +24,12 @@
   padding: 0 20px;
 }
 
+/* Service Card */
 .service-card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   text-align: center;
@@ -52,14 +56,82 @@
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
 }
 
 .service-card:hover img {
   transform: scale(1.05);
 }
 
+/* Keyframes for Fade-in Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For medium screens (tablets) */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+    margin-top: 80px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+
+  .service-card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-card img {
+    height: 150px;
+  }
+
+  .service-card h2 {
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    padding: 0 15px 15px;
+  }
+}
+
+/* For small screens (phones) */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-card img {
+    height: 130px;
+  }
+
+  .service-card h2 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    padding: 0 10px 10px;
+  }
 }

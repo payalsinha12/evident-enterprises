@@ -1,73 +1,97 @@
-/* Navbar Styling */
+/* Base Navbar Styles (same as yours) */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6600;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-buttons button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-buttons button:hover {
+  background-color: rgba(33, 189, 224, 0.2);
+  border-radius: 5px;
+}
+
+/* Hamburger Icon - Hidden by default */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-buttons.active {
+    display: flex;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    color: black;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .logo {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: rgb(255, 255, 255);
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
     width: 100%;
-    top: 0;
-    z-index: 1000;
   }
-  
-  /* Logo */
-  .logo img {
-    height: 60px;
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li {
-    display: inline;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
-    transition: 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #ff6600;
-  }
-  
-  /* Social Icons */
-  .social-icons a {
-    margin-left: 15px;
-    font-size: 20px;
-    color: black;
-    transition: 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #ff6600;
-  }
-  .nav-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-buttons button {
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    cursor: pointer;
-    padding: 8px 16px;
-    transition: background 0.3s;
-  }
-  
-  .nav-buttons button:hover {
-    background-color: rgba(33, 189, 224, 0.2);
-    border-radius: 5px;
-  }
-  
+}
